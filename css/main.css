@@ -44,17 +44,23 @@ main .main-description div {
   height: 60px;
   font-size: 11px;
   margin: 0;
+  text-align: center;
 }
 
-main .main-description .feature h2 {
+main .main-description .feature a {
   color: #3366cc;
   margin: 0;
-  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main .main-description .feature a:hover {
+  text-decoration: underline;
 }
 
 main .main-description .feature p {
   margin: 0;
-  text-align: center;
   padding: 5px;
 }
 
@@ -146,7 +152,45 @@ main .main-input-search {
   position: absolute;
   top: 55%;
   left: 40%;
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 320px 40px 44px;
+}
+
+main .main-input-search input {
+  width: 310px;
+  height: 38px;
+  padding: 1px 0;
+  text-align: end;
+  border: 0;
+}
+
+main .main-input-search .icon-expand {
+  display: flex;
+  align-items: center;
+}
+
+main .main-input-search .icon-expand span {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main .main-input-search .icon-expand:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+main .main-input-search .icon-search-white {
+  background-color: #3366cc;
+  text-align: end;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .main-input-search .icon-search-white:hover {
+  background-color: #447ff5;
+  cursor: pointer;
 }
 
 main .main-botton {
@@ -163,10 +207,73 @@ main .main-botton button {
   margin: 0 auto;
   width: 268px;
   height: 36px;
-  padding: 5px 5px;;
+  padding: 10px 5px;;
   font-size: 13.5px;
   color: #3366cc;
   font-weight: bold;
+}
+
+main .main-botton .icon-wikipedia {
+  margin: 0 5px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+main .main-botton .icon-expand_more {
+  margin: 0;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+main .main-botton .icon-expand_more {
+  cursor: pointer;
+}
+
+.options-wiki {
+  display: grid;
+  grid-template-columns: repeat(4, 400px);
+  grid-template-rows: repeat(4, 100px);
+  grid-gap: 5px 5px;
+  justify-content: center;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 130px;
+  border-top: 1px solid #c8ccd1;
+  padding-top: 40px;
+}
+
+.options-wiki .wikipedia-foundation {
+  grid-row: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.options-wiki .wikipedia-app {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+.options-wiki p {
+  margin-left: 13px;
+  line-height: 180%;
+}
+
+.options-wiki .options-wiki-commons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-wiki .options-wiki-commons strong {
+  color: #7ab8ea;
 }
 
 @font-face {
